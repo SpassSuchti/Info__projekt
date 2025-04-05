@@ -1,0 +1,41 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaphone - Startseite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Willkommen bei Amaphone</h1>
+        <nav>
+            <ul>
+                <li><a href="products.html">Produkte</a></li>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <li><a href="cart.php">Warenkorb</a></li>
+                    <li><a href="logout.php">Abmelden</a></li>
+                <?php else: ?>
+                    <li><a href="login.php">Anmelden</a></li>
+                    <li><a href="register.php">Registrieren</a></li>
+                <?php endif; ?>
+                <li><a href="impressum.php">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Entdecke die neuesten Produkte</h2>
+            <p>Die besten Smartphones und Zubehör zu unschlagbaren Preisen!</p>
+            <a href="products.html" class="btn">Jetzt einkaufen</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Amaphone. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
