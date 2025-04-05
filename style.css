@@ -10,9 +10,18 @@ header {
     padding: 10px 20px;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
 }
 
@@ -20,26 +29,18 @@ main {
     padding: 20px;
 }
 
-form {
-    max-width: 300px;
-    margin: auto;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-form button {
+.product {
+    border: 1px solid #ccc;
     padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
     background-color: #333;
     color: white;
-    border: none;
-    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
